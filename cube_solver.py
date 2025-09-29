@@ -17,6 +17,7 @@ The solution is represented by a string of up to 16 digits, each one going from 
 '''
 
 from utils import *
+import os
 
 # Initialization
 # l --> lengths of the manipulator links
@@ -58,4 +59,5 @@ for i, solution in enumerate(valid_solutions):
     Q = str2angles(solution)
     x, ext_x = joints2points(Q, l)
     plot_solution(x, ext_x, savedir = os.path.join('solutions', str(i) + '.jpg'))
+
 
